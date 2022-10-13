@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Mudou</title>
+    <style>
+        div {
+            margin-top: 10px;
+        }
+        #res{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preço Mudou</h1>
+    <button id="botão" onclick="Preço()">Verificar</button>
+    <div id="txt"> Clique no botão acima para analisar a mudança de preço</div><div id="res"></div>
+    <script>
+        function Preço(){
+            var price1 = Number(window.prompt('Qual o preço inicial do produto?'))
+            var price2 = Number(window.prompt('Qual o preço novo do produto?'))
+            var preço1 = price1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            var preço2 = price2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+
+            if (price1 > price2) {
+                var diferença = (price1 - price2).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+                var porc = (((price1 / price2) * 100) - 100).toFixed(2)
+                res.innerHTML = `O produto custava ${preço1} e agora custa ${preço2}.<br/>Hoje o produto está mais barato.<br/>O preço caiu em ${diferença} em relação ao preço anterior.<br/>Uma variação de ${porc}% para baixo.`
+            }
+            else if (price2 > price1) {
+                var diferença = (price2 - price1).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+                var porc = (((price2 / price1) * 100) - 100).toFixed(2)
+                res.innerHTML = `O produto custava ${preço1} e agora custa ${preço2}.<br/>Hoje o produto está mais caro.<br/>O preço subiu em ${diferença} em relação ao preço anterior.<br/>Uma variação de ${porc}% para cima.`
+            }
+            txt.innerHTML = `<strong>Analizando os valores informados</strong>`
+
+        }
+                
+    </script>
+</body>
+</html>
