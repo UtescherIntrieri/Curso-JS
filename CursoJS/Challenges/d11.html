@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        div {
+            margin-top: 10px;
+        }
+        #res{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descobrindo um ano bissexto</h1>
+    <button id="botão" onclick="Bis()">Calcular</button>
+    <div id="txt"></div>
+    <script>
+        var bissexto = ''
+        function Bis(){
+            var year = Number(window.prompt('Digite o ano para Consulta'))
+            if (year % 4 !== 0) {
+                bissexto = 'Não é bissexto ❌'
+                txt.innerHTML = `Analizando o ano de ${year}...<br/><strong><div id =res>${bissexto}</div></strong>`
+                document.getElementById("res").style.backgroundColor = "red";
+            }
+            else if (year % 100 !== 0) {
+                bissexto = 'É bissexto ✔️'
+                txt.innerHTML = `Analizando o ano de ${year}...<br/><strong><div id =res>${bissexto}</div></strong>`
+                document.getElementById("res").style.backgroundColor = "green";
+            }
+            else if (year % 400 == 0) {
+                bissexto = 'É bissexto ✔️'
+                txt.innerHTML = `Analizando o ano de ${year}...<br/><strong><div id =res>${bissexto}</div></strong>`
+                document.getElementById("res").style.backgroundColor = "green";
+            }
+        }
+                
+    </script>
+</body>
+</html>
