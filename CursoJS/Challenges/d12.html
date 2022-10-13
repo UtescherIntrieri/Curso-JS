@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Mudou</title>
+    <style>
+        div {
+            margin-top: 10px;
+        }
+        #res{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preço Mudou</h1>
+    <button id="botão" onclick="Preço()">Verificar</button>
+    <div id="txt"> Clique no botão acima para analisar a mudança de preço</div>
+    <div id="res"></div>
+    <script>
+        var bissexto = ''
+        function Preço(){
+            var preço1 = Number(window.prompt('Qual o preço inicial do produto?'))
+            var preço2 = Number(window.prompt('Qual o preço novo do produto?'))
+            if (preço1 > preço2) {
+                var diferença = preço1 - preço2
+                var porc = ((preço1 / preço2) * 100) - 100
+                res.innerHTML = `O produto custava ${preço1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} e agora custa ${preço2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>Hoje o produto está mais barato.<br/>O preço caiu em ${diferença.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} em relação ao preço anterior.<br/>Uma variação de ${porc.toFixed(2)}% para baixo.`
+            }
+            else if (preço2 > preço1) {
+                var diferença = preço2 - preço1
+                var porc = ((preço2 / preço1) * 100) - 100
+                res.innerHTML = `O produto custava ${preço1.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} e agora custa ${preço2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>Hoje o produto está mais caro.<br/>O preço subiu em ${diferença.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} em relação ao preço anterior.<br/>Uma variação de ${porc.toFixed(2)}% para cima.`
+            }
+            txt.innerHTML = `<strong>Analizando os valores informados</strong>`
+
+        }
+                
+    </script>
+</body>
+</html>
