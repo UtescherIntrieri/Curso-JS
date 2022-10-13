@@ -1,0 +1,73 @@
+#02
+Q01 Sabe a diferença entre um cliente e um servidor para internet?
+client efetua o request, são os meus dispositivos
+Q02 Para que serve Html, CSS e JS?
+html contém as informações, css estiliza elas e js é a engrenagem que determina seu behavior
+Q03 4 sites que utilizam JavaScript
+FB YT .gov Google
+
+#03
+Q01 Empresa criadora do JS
+Brendan Eich at netscape
+Q02 java e js possuem alguma relação?
+apenas o nome, como uma jogada de marketing
+Q03 o que ECMAscript tem a ver com js?
+é a padronização do js
+
+#04
+Q01 Livros/Documentos recomendados para leitura
+"JavaScript o guia definitivo - David Flaganan", "JavaScript guia do programador - mauricio samy silva" "guia de referencia mozilla" "o gui de referencia ECMA"
+Q02 Para aprender JS, é necessário saber inglês?
+não, apenas o básico
+Q03 Que dicas nós demos para estudar?
+Escrever e anotar, realizar os exercicios e praticar
+
+#05
+Q01 Sabe organizar pastas no vscode
+sim
+Q02 node.js no pc?
+sim
+Q03 sabe diferenciar html,css e js dentro de um codigo?
+HTML é o codigo base, tudo dentro de style é cc e tud dentro de scrip é js
+
+#06
+Q01 o que é uma variavel?
+uma maneira de guardar valores de dados
+Q02 como declarar uma variavel numerica inteira ou real usando js
+n = 123
+Q03 quais sao os tipos primitivos do js
+number, boolean e string
+
+#07 
+Q01 como é possivel guardar o valor digitado em um prompt() dentro de uma variável?
+var n = window.prompt()
+Q02 como fazer com que um numero digitado em um prompt() possa ser usado em calculos?
+var n = Number(window.prompt())
+Q03 como transformar todas as letras em maiusculas?
+.toUpperCase
+
+#08
+Q01 Pra que serve o operador % no js?
+mostrar o resto de uma divisão 
+Q02 6+4/2 é igual a 5 ou 8?
+8
+Q03 se uma variavel n vale 10 e executamos um n += 5, qual será seu novo valor?
+seu novo valor será 10| n = 10 -> n = n + 5
+
+#09
+Q01 diferença entre =, == e === no js?
+= determina um valor, == realiza comparações, === realiza comparações restritas, ele checa tudo, inclusive o tipo dos valores.
+Q02 prioridade entre || e &&
+primeiro && e depois ||
+Q03 Sabe utilizar o operador ternário para colocar um de dois valores em uma variável?
+var x = 8 | var res = x % 2 == 0?'par':'impar'
+
+#010
+Q01 O que significa DOM?
+Document object model
+Q02 arvore DOM de um site simples
+-
+Q03 O que são elementos Parent e Child de uma arvore DOM
+Elementos parent são "diretórios" com elementos "child" dentro, assim como o diretório HTML tem como childs Head e Body
+Q04 Quais os 5 principais métodos de selecionar elementos DOM dentro do JS?
+window.document.getElementBy Id,ClassName, Name, ClassName, QuerySelector

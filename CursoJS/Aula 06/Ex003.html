@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(105, 105, 173);
+            color: white; /* comentario em css */
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(255, 212, 22 );
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1> <!--comentario em html-->
+    <p> no curse!!</p>
+    <script>
+      var n1 = Number(window.prompt('Digite um número: ')) //window.promp retorna string
+      var n2 = Number(window.prompt('Digite outro número: ')) //Number.parseInt(n) ou Number.parseFloat(n) ou Number(n)
+      var s = n1 + n2 //String(n) ou n.toString()
+      window.alert(`A soma de ${n1} e ${n2} é ${s}`) // + pode ser usado parar adiçao (num + num) ou para concatenação (str + str)
+        //var s = 'nai'
+        //'eu amo s'    sem interpolação
+        //'eu amo ' + s     usa concatenação
+        //`eu amo ${s}`   template string
+        //s.length
+        //s.toUpperCase
+        //s.toLowerCase
+    </script>
+</body>
+</html>

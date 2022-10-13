@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste</title>
+    <style>
+        #desc {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra seu Reajuste Salarial</h1>
+    <input type="button" value="Reajustar Salário" onclick="Reajuste()">
+    <div id="desc"></div>
+    <div id="res"></div>
+    <script>
+        function Reajuste() {
+            var nome = window.prompt('Qual o nome do funcionário?')
+            var salário = Number(window.prompt(`Qual o salário de ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}?`))
+            var porcentagem = Number(window.prompt(`Será reajustado em qual porcentagem?`))
+            var porc = porcentagem / 100
+            var aumento = salário * porc
+            var novosalário = salário + aumento
+            desc.innerHTML = `Calculando o reajuste salarial de ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}`
+            res.innerHTML = `O salário atual é de${salário.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>Com um aumento de ${porcentagem}% ou ${aumento.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>Seu novo salário é de ${novosalário.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`     
+        }
+    </script>
+</body>
+</html>

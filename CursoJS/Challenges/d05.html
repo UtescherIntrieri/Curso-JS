@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <style>
+        body {
+            display: inline-block;
+        }
+        div {
+            padding-top: 10px;
+        }
+        #txt {
+            font: bold 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <input type="button" value="Converter" onclick="Converter()"><div id="txt"></div><div id="res"></div>
+    <script>
+        function Converter() {
+        var res = window.document.getElementById('res')
+        var txt = window.document.getElementById('txt')
+        var metros = Number(window.prompt('Qual a distância em metros que gostaria de converter?'))
+        var km = metros / 1000
+        var hm = metros / 100
+        var dam = metros / 10
+        var dm = metros * 10
+        var cm = metros * 100
+        var mm = metros * 1000
+        txt.innerHTML = `distância de <strong>${metros.toFixed(2)}</strong> metros representa:<br/>`
+        res.innerHTML = `${km.toFixed(2)} Kilometro (Km)<br/>${hm.toFixed(2)} Hectômetro (Hm)<br/>${dam.toFixed(2)} Decâmetro (Dam)<br/>${dm.toFixed(2)} Decímetro (Dm)<br/>${cm.toFixed(2)} Centímetro (Cm)<br/>${mm.toFixed(2)} Milímetro (Mm)`
+        }
+        </script>
+</body>
+</html>

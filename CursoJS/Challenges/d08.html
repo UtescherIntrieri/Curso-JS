@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+    <style>
+        #desc {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra seu desconto</h1>
+    <input type="button" value="Desconto de 10%" onclick="Desconto()">
+    <div id="desc"></div>
+    <div id="res"></div>
+    <script>
+        function Desconto() {
+            var nome = window.prompt('Qual o nome do produto a ser comprado?')
+            var preço = Number(window.prompt('Qual o valor do produto?'))
+            var desconto = preço * 0.1
+            var novopreço = preço - desconto
+            desc.innerHTML = `Calculando o desconto de 10% para ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}`
+            desc.innerHTML = `Você está comprando um ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}.<br/>Ele custa ${preço.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>Este é o seu desconto: ${desconto.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>O novo preço é: ${novopreço.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`     
+        }
+    </script>
+</body>
+</html>

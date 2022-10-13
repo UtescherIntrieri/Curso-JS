@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baskhara</title>
+    <style>
+        #txt {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Baskhara</h1>
+    <input type="button" value="Calcular Baskhara" onclick="Baskhara()">
+    <div id="txt"> Considerando uma equação no formato Δ = ax² + bx + c = 0, aperte o botão acima e calcule a equação.</div>
+    <div id="del"></div>
+    <div id="txt2"></div>
+    <div id="xum"></div>
+    <div id="xdois"></div>
+    <script>
+        function Baskhara() {
+        var a = window.prompt('Qual o valor de a?')
+        var b = window.prompt('Qual o valor de b?')
+        var c = window.prompt('Qual o valor de c?')
+        txt.innerHTML = `A equação atual é: Δ = ${a}x² + ${b}x + ${c} = 0 <br/> O cálculo realizado será: Δ = ${b}² - 4 * ${a} * ${c}`
+        var delta = b ** 2 - 4 * a * c
+        txt2.innerHTML = `A próxima equação calcula a próxima parte da equação: X = (-${b} ± √Δ) / 2 * ${a}`
+        var x1 = (-b + Math.sqrt(delta)) / (2 * a)
+        var x2 = (-b - Math.sqrt(delta)) / (2 * a)
+        del.innerHTML = `Δ = ${delta.toFixed(3)}`
+        xum.innerHTML = `X' = ${x1.toFixed(3)}`
+        xdois.innerHTML = `X'' = ${x2.toFixed(3)}`
+        }
+    </script>
+</body>
+</html>

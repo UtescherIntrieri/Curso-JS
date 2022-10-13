@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio antes e depois</title>
+</head>
+<body>
+    <h1>Antecessor e Sucessor</h1>
+    <input type="button" value="Começar" onclick="AntesDepois()">
+    <script>
+        function AntesDepois() {
+        var num = Number(window.prompt('Escolha um número inteiro'))
+        var antecessor = num - 1
+        var sucessor = num + 1
+        window.alert(`Você escolheu ${num}. Antes dele vem ${antecessor} e depois dele vem ${sucessor} `)       
+    }
+    </script>
+</body>
+</html>
