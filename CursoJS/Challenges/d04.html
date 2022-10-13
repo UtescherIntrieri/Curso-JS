@@ -8,14 +8,17 @@
 </head>
 <body>
     <h1>Calculando Troco</h1>
-    <input type="button" value="Fazer Compra" onclick="Compra()">
+    <button id="botão" onclick="Compra()">Fazer Compra</button>
     <script>
         function Compra() {
-            var nome = window.prompt('Qual o nome do produto a ser comprado?')
-            var preço = Number(window.prompt('Qual o valor do produto?'))
-            var pago = Number(window.prompt('Qual foi o valor pago?'))
-            var troco = pago - preço
-            window.alert(`Você está comprando um ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}.\n Ele custa ${preço.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.\n Você está pagando ${pago.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.\n O seu troco é de ${troco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`)     
+            var name = window.prompt('Qual o nome do produto a ser comprado?')
+            var price = (Number(window.prompt('Qual o valor do produto?')))
+            var pay = (Number(window.prompt('Qual foi o valor pago?')))
+            var nome = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
+            var preço = price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            var pago = pay.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            var troco = (pay - price).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            window.alert(`Você está comprando um ${nome}.\n Ele custa ${preço}.\n Você está pagando ${pago}.\n O seu troco é de ${troco}.`)     
         }
     </script>
 </body>

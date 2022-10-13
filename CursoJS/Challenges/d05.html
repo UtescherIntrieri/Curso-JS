@@ -19,20 +19,20 @@
 </head>
 <body>
     <h1>Conversor de Medidas</h1>
-    <input type="button" value="Converter" onclick="Converter()"><div id="txt"></div><div id="res"></div>
+    <button id="botão" onclick="Converter()">Converter</button><div id="txt"></div><div id="res"></div>
     <script>
         function Converter() {
         var res = window.document.getElementById('res')
         var txt = window.document.getElementById('txt')
-        var metros = Number(window.prompt('Qual a distância em metros que gostaria de converter?'))
-        var km = metros / 1000
-        var hm = metros / 100
-        var dam = metros / 10
-        var dm = metros * 10
-        var cm = metros * 100
-        var mm = metros * 1000
-        txt.innerHTML = `distância de <strong>${metros.toFixed(2)}</strong> metros representa:<br/>`
-        res.innerHTML = `${km.toFixed(2)} Kilometro (Km)<br/>${hm.toFixed(2)} Hectômetro (Hm)<br/>${dam.toFixed(2)} Decâmetro (Dam)<br/>${dm.toFixed(2)} Decímetro (Dm)<br/>${cm.toFixed(2)} Centímetro (Cm)<br/>${mm.toFixed(2)} Milímetro (Mm)`
+        var metros = (Number(window.prompt('Qual a distância em metros que gostaria de converter?'))).toFixed(2)
+        var km = (metros / 1000).toFixed(2)
+        var hm = (metros / 100).toFixed(2)
+        var dam = (metros / 10).toFixed(2)
+        var dm = (metros * 10).toFixed(2)
+        var cm = (metros * 100).toFixed(2)
+        var mm = (metros * 1000).toFixed(2)
+        txt.innerHTML = `distância de <strong>${metros}</strong> metros representa:<br/>`
+        res.innerHTML = `${km} Kilometro (Km)<br/>${hm} Hectômetro (Hm)<br/>${dam} Decâmetro (Dam)<br/>${dm} Decímetro (Dm)<br/>${cm} Centímetro (Cm)<br/>${mm} Milímetro (Mm)`
         }
         </script>
 </body>

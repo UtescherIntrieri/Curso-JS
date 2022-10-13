@@ -13,19 +13,26 @@
 </head>
 <body>
     <h1>Descubra seu Reajuste Salarial</h1>
-    <input type="button" value="Reajustar Salário" onclick="Reajuste()">
-    <div id="desc"></div>
-    <div id="res"></div>
+    <button id="botão" onclick="Reajuste()">Reajustar Salário</button><div id="desc"></div><div id="res"></div>
     <script>
         function Reajuste() {
-            var nome = window.prompt('Qual o nome do funcionário?')
-            var salário = Number(window.prompt(`Qual o salário de ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}?`))
+            var name = window.prompt('Qual o nome do funcionário?')
+            var words = name.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+            }
+            var nome = words.join(" ");
+            var pay = Number(window.prompt(`Qual o salário de ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}?`))
             var porcentagem = Number(window.prompt(`Será reajustado em qual porcentagem?`))
-            var porc = porcentagem / 100
-            var aumento = salário * porc
-            var novosalário = salário + aumento
-            desc.innerHTML = `Calculando o reajuste salarial de ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}`
-            res.innerHTML = `O salário atual é de${salário.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>Com um aumento de ${porcentagem}% ou ${aumento.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>Seu novo salário é de ${novosalário.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`     
+            var perc = porcentagem / 100
+            var raise = pay * perc
+            
+            var salário = pay.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            var aumento = raise.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            var novosalário = (pay + raise).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            
+            desc.innerHTML = `Calculando o reajuste salarial de ${nome}`
+            res.innerHTML = `O salário atual é de ${salário}.<br/>Com um aumento de ${porcentagem}% ou ${aumento}.<br/>Seu novo salário é de ${novosalário}`     
         }
     </script>
 </body>

@@ -13,17 +13,18 @@
 </head>
 <body>
     <h1>Descubra seu desconto</h1>
-    <input type="button" value="Desconto de 10%" onclick="Desconto()">
-    <div id="desc"></div>
-    <div id="res"></div>
+    <button id="botão" onclick="Desconto()">Desconto de 10%</button><div id="txt"></div><div id="res"></div>
     <script>
         function Desconto() {
-            var nome = window.prompt('Qual o nome do produto a ser comprado?')
-            var preço = Number(window.prompt('Qual o valor do produto?'))
-            var desconto = preço * 0.1
-            var novopreço = preço - desconto
-            desc.innerHTML = `Calculando o desconto de 10% para ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}`
-            desc.innerHTML = `Você está comprando um ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}.<br/>Ele custa ${preço.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>Este é o seu desconto: ${desconto.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}.<br/>O novo preço é: ${novopreço.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`     
+            var name = window.prompt('Qual o nome do produto a ser comprado?')
+            var nome = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
+            var price = Number(window.prompt('Qual o valor do produto?'))
+            var desc = price * 0.1
+            var novopreço = (price - desc).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            var preço = price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            var desconto = desc.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+            txt.innerHTML = `Calculando o desconto de 10% para ${nome}`
+            txt.innerHTML = `Você está comprando um ${nome}.<br/>Ele custa ${preço}.<br/>Este é o seu desconto: ${desconto}.<br/>O novo preço é: ${novopreço}`     
         }
     </script>
 </body>

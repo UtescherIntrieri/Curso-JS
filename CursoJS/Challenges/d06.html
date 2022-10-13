@@ -19,16 +19,16 @@
 </head>
 <body>
     <h1>Conversor de Temperatura</h1>
-    <input type="button" value="Converter" onclick="Converter()"><div id="txt"></div><div id="res"></div>
+    <button id="botão" onclick="Converter()">Converter</button><div id="txt"></div><div id="res"></div>
     <script>
         function Converter() {
         var res = window.document.getElementById('res')
         var txt = window.document.getElementById('txt')
         var c = Number(window.prompt('Qual a temperatura em °C (Celsius) que gostaria de converter?'))
-        var f = c * 1.8 + 32
-        var k = c + 273.15
-        txt.innerHTML = `Temperatura de <strong>${c.toFixed(2)}</strong>°C representa:<br/>`
-        res.innerHTML = `${f.toFixed(2)}°F<br/>${k.toFixed(2)}°K`
+        var f = (c * 1.8 + 32).toFixed(2)
+        var k = (c + 273.15).toFixed(2)
+        txt.innerHTML = `Temperatura de <strong>${c}</strong>°C representa:<br/>`
+        res.innerHTML = `${f}°F<br/>${k}°K`
         }
         </script>
 </body>

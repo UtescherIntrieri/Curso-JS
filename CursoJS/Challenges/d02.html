@@ -8,12 +8,17 @@
 </head>
 <body>
     <h1>Boas-Vindas</h1>
-    <input type="button" value="Começar" onclick="BoasVindas()">
+    <button id="botão" onclick="BoasVindas()">Começar</button>
     <script>
     function BoasVindas() {
-        var nome = window.prompt('Olá, qual seu nome?')
+        var name = window.prompt('Olá, qual seu nome?')
+        var words = name.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+            }
+            var nome = words.join(" ");
         var idade = Number(window.prompt('Quantos anos você tem?'))
-        window.alert(`Olá ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}, prazer! Você tem ${idade} anos!`)       
+        window.alert(`Olá ${nome}, prazer! Você tem ${idade} anos!`)       
     }
     </script>
 </body>
