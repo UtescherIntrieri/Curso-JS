@@ -16,8 +16,7 @@
     <button id="botão" onclick="Reajuste()">Reajustar Salário</button><div id="desc"></div><div id="res"></div>
     <script>
         function Reajuste() {
-            var name = window.prompt('Qual o nome do funcionário?')
-            var name = name.toLowerCase()
+            var name = (window.prompt('Qual o nome do funcionário?')).toLowerCase()
             var words = name.split(" ");
             for (let i = 0; i < words.length; i++) {
                 words[i] = words[i][0].toUpperCase() + words[i].substr(1);

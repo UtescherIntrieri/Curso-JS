@@ -11,8 +11,7 @@
     <button id="botão" onclick="BoasVindas()">Começar</button>
     <script>
     function BoasVindas() {
-        var name = window.prompt('Olá, qual seu nome?')
-        var name = name.toLowerCase()
+        var name = (window.prompt('Olá, qual seu nome?')).toLowerCase()
         var words = name.split(" ");
             for (let i = 0; i < words.length; i++) {
                 words[i] = words[i][0].toUpperCase() + words[i].substr(1);

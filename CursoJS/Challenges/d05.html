@@ -22,8 +22,6 @@
     <button id="botão" onclick="Converter()">Converter</button><div id="txt"></div><div id="res"></div>
     <script>
         function Converter() {
-        var res = window.document.getElementById('res')
-        var txt = window.document.getElementById('txt')
         var metros = (Number(window.prompt('Qual a distância em metros que gostaria de converter?'))).toFixed(2)
         var km = (metros / 1000).toFixed(2)
         var hm = (metros / 100).toFixed(2)

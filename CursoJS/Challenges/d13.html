@@ -20,8 +20,7 @@
     <div id="txt"> Clique no botão acima para informar as notas do aluno</div><div id="res"></div>
     <script>
         function Nota(){
-            var name = window.prompt('Qual o nome do aluno?')
-            var name = name.toLowerCase()
+            var name = (window.prompt('Qual o nome do aluno?')).toLowerCase()
             var words = name.split(" ");
             for (let i = 0; i < words.length; i++) {
                 words[i] = words[i][0].toUpperCase() + words[i].substr(1);

@@ -22,8 +22,6 @@
     <button id="botão" onclick="Converter()">Converter</button><div id="txt"></div><div id="res"></div>
     <script>
         function Converter() {
-        var res = window.document.getElementById('res')
-        var txt = window.document.getElementById('txt')
         var c = Number(window.prompt('Qual a temperatura em °C (Celsius) que gostaria de converter?'))
         var f = (c * 1.8 + 32).toFixed(2)
         var k = (c + 273.15).toFixed(2)
