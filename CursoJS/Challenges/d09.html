@@ -24,8 +24,7 @@
             var nome = words.join(" ");
             var pay = Number(window.prompt(`Qual o salário de ${nome}`))
             var porcentagem = Number(window.prompt(`Será reajustado em qual porcentagem?`))
-            var perc = porcentagem / 100
-            var raise = pay * perc
+            var raise = (pay * porcentagem) / 100
             
             var salário = pay.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
             var aumento = raise.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
