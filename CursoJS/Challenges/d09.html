@@ -17,12 +17,13 @@
     <script>
         function Reajuste() {
             var name = window.prompt('Qual o nome do funcionário?')
+            var name = name.toLowerCase()
             var words = name.split(" ");
             for (let i = 0; i < words.length; i++) {
                 words[i] = words[i][0].toUpperCase() + words[i].substr(1);
             }
             var nome = words.join(" ");
-            var pay = Number(window.prompt(`Qual o salário de ${nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase()}?`))
+            var pay = Number(window.prompt(`Qual o salário de ${nome}`))
             var porcentagem = Number(window.prompt(`Será reajustado em qual porcentagem?`))
             var perc = porcentagem / 100
             var raise = pay * perc
