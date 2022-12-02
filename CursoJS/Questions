@@ -71,3 +71,88 @@ Q03 O que são elementos Parent e Child de uma arvore DOM
 Elementos parent são "diretórios" com elementos "child" dentro, assim como o diretório HTML tem como childs Head e Body
 Q04 Quais os 5 principais métodos de selecionar elementos DOM dentro do JS?
 window.document.getElementBy Id,ClassName, Name, ClassName, QuerySelector
+
+#011
+Q01 Cite 3 eventos que podem acontecer com elementos DOM
+click, mouseenter, mouseout
+Q02 O que é uma função? como criar uma?
+São blocos de código com uma tarefa específica, geralmente inerte até ser chamada. Function name() {}
+Q03 como pegar valores de caixas de texto e fazer calculos com eles?
+identificando corretamente as caixas de texto podemos atribuir os valores a variaveis e utilizá-las em nossos cálculos 
+
+#012
+Q01 Sabe usar Node Exec?
+f8
+Q02 Sabe criar uma condição?
+if (condição) {} || if (condição) {} else if (condição) {} 
+Q03 Sabe diferenciar entre condições simples e condições compostas?
+condições simples rodam um comando caso a condição seja suprida. condições compostas tem uma árvore de decisões dependendo do resultado.
+
+#013
+Q01 Mudar cor de fundo dinamicamente usando JS
+document.body.style.background =
+Q02 inserir uma imagem sem a tag <img> previamente criada
+document.createElement('img')
+        img.setAttribute('id', 'foto')
+Q03 entende condições simples, compostas, aninhadas e múltiplas?
+
+#014
+Q01 Como realizar repetição?
+usando um loop lógico, sjea ele o while ou o do...while
+Q02 diferença entre condição e repetição?
+a condição gera resultados diferentes dependendo do input, a repetição é a ação de repetir uma tarefa, seja ela uma condição ou não
+Q03 diferença entre while e do ... while?
+while é uma Estrutura de repetição com teste lógico no inicio e o do...while é uma Estrutura de repetição com teste lógico no final
+
+#Expt4
+Q01 Watch in chrome habilitado?
+sim
+Q02 Sabe usar o modo de depuração?
+sim
+Q03 Fez os testes com while, do...while e for?
+sim
+Q04 Quer aprender ControlesHTML com JS?
+sim
+
+#015
+Q01 Sabe usar while, do...while e for?
+Sim
+Q02 sabe manipular objetos de formulários HTML usando js
+sim
+Q03 Vale a pena voltar e reformular seu código?
+Já fiz ;)
+Q04  acha que usar array é dificil?
+não
+
+#016
+Q01 Simplificou seu codigo usando arrays?
+Não
+Q02 Como colocar em rdem uma array?
+array.sort()
+Q03 sabe disparar uma funcção simples usando um botão?
+sim
+Q04 quer aprender mais sobre funções?
+queroo
+
+#Expt7
+Q01 Watch in chrome
+sim
+Q02 modo de depuração?
+sim
+Q03 treinou arrays e functions?
+sim
+
+#Expt8
+Q01
+Q02
+Q03
+
+#017
+Q01 Assistiu o curso completo?
+sim
+Q02 Fez todos os exercicios?
+sim
+Q03 tentou fazê-los sem ajuda do vídeo?
+sim
+Q04 crious alguma situação própria e tentou resolver?
+sim
