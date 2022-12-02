@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>De que País você é?</h1>
+    <input type="text" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="País()">
+    <div id="res"></div>
+    <script>
+        function País() {
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.querySelector('div#res')
+            var name = (txtv.value)
+            var name = name.toLowerCase()
+            var words = name.split(" ");
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+            }
+            var país = words.join(" ");
+            res.innerHTML = `<p>Vivendo em ${país}</p>`    
+            if (país != 'Brasil') {
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+            else {
+                res.innerHTML += `<p>Você é Brasileiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
